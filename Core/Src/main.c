@@ -55,7 +55,10 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+static uint16_t cnt = 0;
+uint8_t data[50];
+uint16_t size = 0;
+//size = sprintf(data, "miaona %d \n\r",cnt);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -93,6 +96,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_UART_Transmit_IT(&huart2, data, size);
 
   /* USER CODE END 2 */
 
