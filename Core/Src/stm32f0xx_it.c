@@ -124,8 +124,8 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-	HAL_UART_Transmit(&huart2, "Kamil Suchanek\n\r", (uint16_t*)16, 1);
-
+	//HAL_UART_Transmit(&huart2, "Kamil Suchanek\n\r", (uint16_t*)16, 1);
+	//printf("Kamil Suchanek\n\r");
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */

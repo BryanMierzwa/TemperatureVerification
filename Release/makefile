@@ -55,8 +55,8 @@ TemperatureVerification.bin \
 all: TemperatureVerification.elf secondary-outputs
 
 # Tool invocations
-TemperatureVerification.elf: $(OBJS) $(USER_OBJS) C:\Users\kamis\Desktop\TemperatureVerification\STM32F030R8TX_FLASH.ld
-	arm-none-eabi-g++ -o "TemperatureVerification.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\kamis\Desktop\TemperatureVerification\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TemperatureVerification.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+TemperatureVerification.elf: $(OBJS) $(USER_OBJS) C:\Users\user\Desktop\TemperatureVerification\STM32F030R8TX_FLASH.ld
+	arm-none-eabi-g++ -o "TemperatureVerification.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\user\Desktop\TemperatureVerification\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TemperatureVerification.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
